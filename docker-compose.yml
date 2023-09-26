@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  go:
+    build:
+      context: ./.docker/
+    container_name: "examples-go"
+    restart: always
+    ports:
+      - "3313:3000"
+    volumes:
+      - .:/usr/src/app
